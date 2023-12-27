@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable">
+    <aura:attribute name="recordId" type="Id"/>
+    <c:demoLauncherLWC 
+        recordId ="{!v.recordId}" 
+        aura:id="testLWC">
+    </c:demoLauncherLWC> 
+    <lightning:card title="Demo Aura Component for Dynamic LWC">
+        <lightning:button
+            variant="brand"
+            label="Test Dynamic LWC - 1"
+            onclick="{!c.openTestLWC1}"
+            class="slds-m-around_x-small">
+        </lightning:button>
+        <lightning:button
+            variant="brand"
+            label="Test Dynamic LWC - 2"
+            onclick="{!c.openTestLWC2}"
+            class="slds-m-around_x-small">
+        </lightning:button>
+    </lightning:card>
+</aura:component>
